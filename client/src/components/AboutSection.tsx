@@ -11,19 +11,16 @@ export function AboutSection() {
             </h2>
             <div className="space-y-6 text-lg leading-relaxed text-foreground/80" data-testid="text-about-content">
               <p>
-                Hi — I'm [Your Name], founder of Barrel + Verse. I come to wine not as a
-                credential‑chaser but as a curious soul drawn to the land, the table, and the people
-                behind the bottle.
+                Hi — I'm Mitchell Robertson, founder of Barrel + Verse. I'm a winemaker, educator, and storyteller who believes a good glass of wine should tell you something true: about the land, yes, but also about the people who tend it, and the hands that lift the bottle to the table.
               </p>
               <p>
-                I've wandered vineyard rows from Rioja to Burgundy, sat at family tables across
-                continents, and poured glasses for friends in kitchens that hummed with conversation.
-                Now, I'm building a foundation in wine education while working toward my dream of
-                opening a small winery in Spain's Basque Country.
+                I come to wine not by straight path but by appetite. Through my journey, I've captured wine stories and created educational experiences that connect people more deeply to what's in their glass—from vineyard sourcing and winemaking to workshops that explore not just how wine is made, but why it matters.
+              </p>
+              <p>
+                With certifications in Oenology, Viticulture, WSET, and the Rioja Wine Diploma, alongside work across more than 30 countries, I've learned to listen first, translate without flattening, and celebrate specificity. My dream is to eventually build a small winery in Spain's Basque Country—but for now, I'm here to share what I've learned and help others discover how alive wine really is.
               </p>
               <p className="italic text-xl text-primary font-light">
-                I believe the best wines don't just age — they live with us. And the journey to
-                understanding them should be as rich as the wines themselves.
+                A good bottle of wine is like a great song. It lingers. It moves. It connects us.
               </p>
             </div>
           </div>

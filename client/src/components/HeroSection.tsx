@@ -12,11 +12,10 @@ export function HeroSection() {
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         <h1 className="font-serif text-5xl md:text-7xl font-light leading-tight text-white mb-8" data-testid="text-hero-title">
-          Slow down. Pour in. Listen.
+          Wine Should Feel Like Memory
         </h1>
         <p className="text-lg md:text-xl text-white/90 leading-relaxed italic max-w-3xl mx-auto" data-testid="text-hero-subtitle">
-          At Barrel + Verse we believe wine is story, place, and memory — and every glass invites us
-          to sit, reflect, and share.
+          Barrel + Verse was born from the belief that wine should be the convergence of place, time, and emotion. The best bottles aren't meant to simply be tasted—they're meant to be experienced. Like a great song, they linger. They move. They connect us.
         </p>
       </div>
 

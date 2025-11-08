@@ -1,4 +1,4 @@
-import { Wine, Instagram, Facebook, Mail } from "lucide-react";
+import { Wine, Instagram, Facebook, Mail, Linkedin } from "lucide-react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -47,6 +47,16 @@ export function Footer() {
             <h3 className="font-serif text-lg mb-4">Connect</h3>
             <div className="flex gap-4">
               <a
+                href="https://linkedin.com/in/mitchellrobertson"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover-elevate active-elevate-2 p-2 rounded-md"
+                aria-label="LinkedIn"
+                data-testid="link-linkedin"
+              >
+                <Linkedin className="h-5 w-5 text-muted-foreground hover:text-foreground transition-colors" />
+              </a>
+              <a
                 href="#"
                 className="hover-elevate active-elevate-2 p-2 rounded-md"
                 aria-label="Instagram"
@@ -63,7 +73,7 @@ export function Footer() {
                 <Facebook className="h-5 w-5 text-muted-foreground hover:text-foreground transition-colors" />
               </a>
               <a
-                href="#"
+                href="mailto:hello@barrelandverse.com"
                 className="hover-elevate active-elevate-2 p-2 rounded-md"
                 aria-label="Email"
                 data-testid="link-email"
