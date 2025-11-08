@@ -12,15 +12,18 @@ export function AboutSection() {
             <div className="space-y-6 text-lg leading-relaxed text-foreground/80" data-testid="text-about-content">
               <p>
                 Hi — I'm [Your Name], founder of Barrel + Verse. I come to wine not as a
-                credential‑chasher but as a curious soul drawn to the land, the table and the people
+                credential‑chaser but as a curious soul drawn to the land, the table, and the people
                 behind the bottle.
               </p>
               <p>
-                I've wandered vineyard rows, sat at family tables, and poured glasses for friends in
-                kitchens that hummed with conversation.
+                I've wandered vineyard rows from Rioja to Burgundy, sat at family tables across
+                continents, and poured glasses for friends in kitchens that hummed with conversation.
+                Now, I'm building a foundation in wine education while working toward my dream of
+                opening a small winery in Spain's Basque Country.
               </p>
               <p className="italic text-xl text-primary font-light">
-                I believe the best wines don't just age — they live with us.
+                I believe the best wines don't just age — they live with us. And the journey to
+                understanding them should be as rich as the wines themselves.
               </p>
             </div>
           </div>

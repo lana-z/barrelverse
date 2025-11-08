@@ -49,12 +49,11 @@ export function ContactSection() {
             </h2>
             <div className="space-y-6 text-lg leading-relaxed text-foreground/80">
               <p>
-                Whether you're curious about our courses, interested in joining an experience, or
-                simply want to chat about wine — we'd love to hear from you.
+                Whether you're taking your first steps into wine, looking to deepen your knowledge,
+                or curious about joining one of our curated experiences — we'd love to hear from you.
               </p>
               <p>
-                Drop us a note and we'll get back to you as soon as we can. Let's start a
-                conversation.
+                Drop us a note and let's start a conversation about wine, story, and place.
               </p>
             </div>
           </div>

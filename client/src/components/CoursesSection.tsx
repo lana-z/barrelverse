@@ -6,17 +6,17 @@ export function CoursesSection() {
     {
       icon: Users,
       title: "In-Person Masterclasses",
-      description: "Small gatherings with 4–6 bottles, food pairings, and story-led learning",
+      description: "Intimate gatherings exploring wines from around the world with 4–6 bottles, curated food pairings, and story-led learning. For beginners discovering terroir to advanced students refining their palate.",
     },
     {
       icon: Video,
       title: "Self-Paced Video Courses",
-      description: "Learn terroir, tasting, and pairing at your own rhythm",
+      description: "Explore global wine regions, tasting techniques, and food pairing fundamentals at your own rhythm. From foundational knowledge to advanced topics like biodynamic winemaking and vineyard management.",
     },
     {
       icon: BookOpen,
       title: "Resources & Membership",
-      description: "Tasting sheets, pairing guides, and community Q&As",
+      description: "Access tasting sheets, regional guides, pairing frameworks, and join our community for monthly Q&As, exclusive content, and first access to new experiences.",
     },
   ];
 
@@ -28,7 +28,7 @@ export function CoursesSection() {
             Courses
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Deepen your understanding through intimate learning experiences
+            From your first glass to advanced appreciation—explore wine through story, culture, and place
           </p>
         </div>
 
