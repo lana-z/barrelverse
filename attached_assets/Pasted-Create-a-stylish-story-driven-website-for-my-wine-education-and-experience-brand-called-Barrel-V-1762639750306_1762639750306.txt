@@ -1,0 +1,35 @@
+Create a stylish, story-driven website for my wine education and experience brand called “Barrel + Verse.”
+
+The website should include:
+- A homepage with a poetic brand intro (see below)
+- An About section with my bio
+- A Courses section listing in-person classes, self-paced video courses, and downloadable resources
+- An Experiences section showcasing curated wine & food events (like the Rioja night below)
+- A Contact form
+- Clean, mobile-friendly design with serif fonts, soft color palette (creams, warm greys, muted burgundy highlights)
+- Simple navigation bar at top
+
+Here’s the homepage hero text:
+"Slow down. Pour in. Listen.  
+At Barrel + Verse we believe wine is story, place, and memory — and every glass invites us to sit, reflect, and share."
+
+About Me:
+“Hi — I’m [Your Name], founder of Barrel + Verse. I come to wine not as a credential‑chasher but as a curious soul drawn to the land, the table and the people behind the bottle. I’ve wandered vineyard rows, sat at family tables, and poured glasses for friends in kitchens that hummed with conversation. I believe the best wines don’t just age — they live with us.”
+
+Courses:
+1. **In-Person Masterclasses** – Small gatherings with 4–6 bottles, food pairings, and story-led learning
+2. **Self-Paced Video Courses** – Learn terroir, tasting, and pairing at your own rhythm
+3. **Resources & Membership** – Tasting sheets, pairing guides, and community Q&As
+
+Experiences Example:
+**“Feel Rioja” — An Evening of Soul, Soil & Story**  
+This isn’t a formal tasting. It’s an evening exploring Rioja’s soul — from limestone Alavesa to chalky Alta to sun-warmed Oriental. Wines that breathe and hum with life. Four to six bottles, a few plates of food, stories that drift, and conversation that finds its own rhythm.  
+_“Come for the wine, stay for the company — and maybe leave with a new understanding of what Rioja really means.”_
+
+Contact Form:
+- Name, Email, Message fields
+- Sends to youremail@yourdomain.com
+
+Make the site feel personal and poetic. Think more “slow conversation over dinner” than “e-commerce brochure.” Clean layout, warm tones, welcoming voice.
+
+Please use HTML, CSS, and JavaScript (only if necessary). Make the code editable for customization later.
