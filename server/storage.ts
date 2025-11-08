@@ -93,6 +93,10 @@ export class MemStorage implements IStorage {
     const course: Course = {
       ...insertCourse,
       id,
+      longDescription: insertCourse.longDescription ?? null,
+      image: insertCourse.image ?? null,
+      duration: insertCourse.duration ?? null,
+      level: insertCourse.level ?? null,
       isPublished: insertCourse.isPublished ?? true,
       createdAt: now,
       updatedAt: now,
@@ -137,6 +141,11 @@ export class MemStorage implements IStorage {
     const experience: Experience = {
       ...insertExperience,
       id,
+      longDescription: insertExperience.longDescription ?? null,
+      image: insertExperience.image ?? null,
+      date: insertExperience.date ?? null,
+      location: insertExperience.location ?? null,
+      maxAttendees: insertExperience.maxAttendees ?? null,
       isPublished: insertExperience.isPublished ?? true,
       currentAttendees: 0,
       createdAt: now,
@@ -169,6 +178,7 @@ export class MemStorage implements IStorage {
     const purchase: Purchase = {
       ...insertPurchase,
       id,
+      stripePaymentId: insertPurchase.stripePaymentId ?? null,
       status: "completed",
       createdAt: new Date(),
     };
