@@ -10,9 +10,9 @@ interface CourseCardProps {
 
 export function CourseCard({ icon: Icon, title, description }: CourseCardProps) {
   return (
-    <Card className="hover-elevate transition-transform duration-300 shadow-lg" data-testid={`card-course-${title.toLowerCase().replace(/\s+/g, '-')}`}>
+    <Card className="hover-elevate transition-transform duration-300" data-testid={`card-course-${title.toLowerCase().replace(/\s+/g, '-')}`}>
       <CardHeader className="pb-4">
-        <div className="w-12 h-12 rounded-full bg-primary/15 flex items-center justify-center mb-4 shadow-sm">
+        <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
           <Icon className="h-6 w-6 text-primary" />
         </div>
         <CardTitle className="font-serif text-2xl font-normal" data-testid={`text-course-title-${title.toLowerCase().replace(/\s+/g, '-')}`}>{title}</CardTitle>
