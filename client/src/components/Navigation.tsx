@@ -41,14 +41,16 @@ export function Navigation({ onNavigate }: NavigationProps) {
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? "bg-background/95 backdrop-blur-sm border-b" : "bg-transparent"
+          isScrolled ? "bg-secondary/95 backdrop-blur-sm border-b shadow-md" : "bg-transparent"
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             <button
               onClick={() => handleClick("#home")}
-              className="font-serif text-2xl font-light tracking-wide text-foreground hover-elevate active-elevate-2 px-2 py-1 rounded-md"
+              className={`font-serif text-2xl font-light tracking-wide ${
+                isScrolled ? "text-secondary-foreground" : "text-foreground"
+              } hover-elevate active-elevate-2 px-2 py-1 rounded-md transition-colors`}
               data-testid="link-home"
             >
               Barrel + Verse
@@ -59,7 +61,9 @@ export function Navigation({ onNavigate }: NavigationProps) {
                 <button
                   key={link.href}
                   onClick={() => handleClick(link.href)}
-                  className="text-sm tracking-wider uppercase text-foreground/80 hover:text-foreground transition-colors hover-elevate active-elevate-2 px-3 py-2 rounded-md"
+                  className={`text-sm tracking-wider uppercase ${
+                    isScrolled ? "text-secondary-foreground/80 hover:text-secondary-foreground" : "text-foreground/80 hover:text-foreground"
+                  } transition-colors hover-elevate active-elevate-2 px-3 py-2 rounded-md`}
                   data-testid={`link-${link.label.toLowerCase()}`}
                 >
                   {link.label}

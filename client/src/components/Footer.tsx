@@ -4,7 +4,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-background border-t py-12">
+    <footer className="bg-accent text-accent-foreground border-t border-accent-foreground/10 py-12">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           <div>
@@ -12,31 +12,31 @@ export function Footer() {
               <Wine className="h-5 w-5 text-primary" />
               <span className="font-serif text-xl font-light">Barrel + Verse</span>
             </div>
-            <p className="text-sm text-muted-foreground leading-relaxed italic">
+            <p className="text-sm text-accent-foreground/70 leading-relaxed italic">
               Wine is story, place, and memory
             </p>
           </div>
 
           <div>
             <h3 className="font-serif text-lg mb-4">Quick Links</h3>
-            <ul className="space-y-2 text-sm text-muted-foreground">
+            <ul className="space-y-2 text-sm text-accent-foreground/70">
               <li>
-                <a href="#about" className="hover:text-foreground transition-colors" data-testid="footer-link-about">
+                <a href="#about" className="hover:text-accent-foreground transition-colors" data-testid="footer-link-about">
                   About
                 </a>
               </li>
               <li>
-                <a href="#courses" className="hover:text-foreground transition-colors" data-testid="footer-link-courses">
+                <a href="#courses" className="hover:text-accent-foreground transition-colors" data-testid="footer-link-courses">
                   Courses
                 </a>
               </li>
               <li>
-                <a href="#experiences" className="hover:text-foreground transition-colors" data-testid="footer-link-experiences">
+                <a href="#experiences" className="hover:text-accent-foreground transition-colors" data-testid="footer-link-experiences">
                   Experiences
                 </a>
               </li>
               <li>
-                <a href="#contact" className="hover:text-foreground transition-colors" data-testid="footer-link-contact">
+                <a href="#contact" className="hover:text-accent-foreground transition-colors" data-testid="footer-link-contact">
                   Contact
                 </a>
               </li>
@@ -54,7 +54,7 @@ export function Footer() {
                 aria-label="LinkedIn"
                 data-testid="link-linkedin"
               >
-                <Linkedin className="h-5 w-5 text-muted-foreground hover:text-foreground transition-colors" />
+                <Linkedin className="h-5 w-5 text-accent-foreground/70 hover:text-accent-foreground transition-colors" />
               </a>
               <a
                 href="#"
@@ -62,7 +62,7 @@ export function Footer() {
                 aria-label="Instagram"
                 data-testid="link-instagram"
               >
-                <Instagram className="h-5 w-5 text-muted-foreground hover:text-foreground transition-colors" />
+                <Instagram className="h-5 w-5 text-accent-foreground/70 hover:text-accent-foreground transition-colors" />
               </a>
               <a
                 href="#"
@@ -70,7 +70,7 @@ export function Footer() {
                 aria-label="Facebook"
                 data-testid="link-facebook"
               >
-                <Facebook className="h-5 w-5 text-muted-foreground hover:text-foreground transition-colors" />
+                <Facebook className="h-5 w-5 text-accent-foreground/70 hover:text-accent-foreground transition-colors" />
               </a>
               <a
                 href="mailto:hello@barrelandverse.com"
@@ -78,14 +78,14 @@ export function Footer() {
                 aria-label="Email"
                 data-testid="link-email"
               >
-                <Mail className="h-5 w-5 text-muted-foreground hover:text-foreground transition-colors" />
+                <Mail className="h-5 w-5 text-accent-foreground/70 hover:text-accent-foreground transition-colors" />
               </a>
             </div>
           </div>
         </div>
 
-        <div className="pt-8 border-t text-center">
-          <p className="text-sm text-muted-foreground">
+        <div className="pt-8 border-t border-accent-foreground/10 text-center">
+          <p className="text-sm text-accent-foreground/60">
             © {currentYear} Barrel + Verse. All rights reserved.
           </p>
         </div>
