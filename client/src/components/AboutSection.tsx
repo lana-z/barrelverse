@@ -1,4 +1,4 @@
-import founderImage from "@assets/generated_images/Founder_portrait_for_about_384fecda.png";
+import founderImage from "@assets/mitch-robertson-pfp-bw_1762729814882.jpeg";
 
 export function AboutSection() {
   return (
