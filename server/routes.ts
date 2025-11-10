@@ -6,22 +6,18 @@ import {
   loginSchema,
   insertCourseSchema,
   insertExperienceSchema,
+  insertPurchaseSchema,
   type User 
 } from "@shared/schema";
 import bcrypt from "bcryptjs";
 import { z } from "zod";
 
-// Extend Express Request to include user session
-declare global {
-  namespace Express {
-    interface Request {
-      session: {
-        userId?: string;
-        destroy(callback: (err?: any) => void): void;
-      };
-    }
-  }
-}
+const adminEmails = new Set(
+  (process.env.ADMIN_EMAILS ?? "")
+    .split(",")
+    .map((email) => email.trim().toLowerCase())
+    .filter(Boolean),
+);
 
 // Middleware to check if user is authenticated
 function requireAuth(req: Request, res: Response, next: NextFunction) {
@@ -66,6 +62,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const user = await storage.createUser({
         ...data,
         password: hashedPassword,
+        isAdmin: adminEmails.has(data.email.toLowerCase()),
       });
       
       // Set session
@@ -279,10 +276,11 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Create purchase (will be used with Stripe)
   app.post("/api/purchases", requireAuth, async (req, res) => {
     try {
-      const purchase = await storage.createPurchase({
+      const purchaseInput = insertPurchaseSchema.parse({
         ...req.body,
         userId: req.session.userId!,
       });
+      const purchase = await storage.createPurchase(purchaseInput);
       res.json(purchase);
     } catch (error) {
       res.status(500).json({ error: "Failed to create purchase" });

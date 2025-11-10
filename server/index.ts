@@ -1,23 +1,54 @@
 import express, { type Request, Response, NextFunction } from "express";
 import session from "express-session";
+import connectPgSimple from "connect-pg-simple";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
 
 const app = express();
 
+if (process.env.NODE_ENV !== "development") {
+  app.set("trust proxy", 1);
+}
+
+const sessionSecret =
+  process.env.SESSION_SECRET ||
+  (process.env.NODE_ENV === "development"
+    ? "barrel-verse-secret-change-in-production"
+    : undefined);
+
+if (!sessionSecret) {
+  throw new Error(
+    "SESSION_SECRET must be set in production environments for secure cookies.",
+  );
+}
+
+const PgStore = connectPgSimple(session);
+
+if (process.env.NODE_ENV === "production" && !process.env.DATABASE_URL) {
+  throw new Error(
+    "DATABASE_URL must be set in production to persist sessions and app data.",
+  );
+}
+const sessionOptions: session.SessionOptions = {
+  secret: sessionSecret,
+  resave: false,
+  saveUninitialized: false,
+  cookie: {
+    secure: process.env.NODE_ENV === "production",
+    httpOnly: true,
+    maxAge: 1000 * 60 * 60 * 24 * 7, // 7 days
+  },
+};
+
+if (process.env.DATABASE_URL) {
+  sessionOptions.store = new PgStore({
+    createTableIfMissing: true,
+    conString: process.env.DATABASE_URL,
+  });
+}
+
 // Session middleware
-app.use(
-  session({
-    secret: process.env.SESSION_SECRET || "barrel-verse-secret-change-in-production",
-    resave: false,
-    saveUninitialized: false,
-    cookie: {
-      secure: process.env.NODE_ENV === "production",
-      httpOnly: true,
-      maxAge: 1000 * 60 * 60 * 24 * 7, // 7 days
-    },
-  })
-);
+app.use(session(sessionOptions));
 
 declare module 'http' {
   interface IncomingMessage {
