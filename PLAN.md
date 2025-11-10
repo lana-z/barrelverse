@@ -14,6 +14,7 @@
 - After deploying, smoke-test the production URL: register/login, attempt an admin-only route, and confirm sessions persist across refreshes.
 
 ## Future Enhancements
+- Restore the full-stack deployment path by switching Vercel from the temporary static build (`vercel.json` + `npm run build`) back to the combined API/client build (`npm run build:full`) once the backend is ready to ship.
 - Replace the in-memory fallback store entirely once all environments have a Postgres instance.
 - Add automated seeds (e.g., Drizzle `seed.ts`) to bootstrap demo content and the first admin user.
 - Wire purchase creation to Stripe and add proper webhook validation.
